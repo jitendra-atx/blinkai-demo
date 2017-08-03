@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BlinkAI - Conversation engine for enterprise learning from every interaction.</title>
+    <!-- Insert this line above script imports  -->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+
+    <script src="./assets/js/jquery.particleground.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="./assets/css/blinkai.css" rel="stylesheet">
+    <link href="./assets/css/login.css" rel="stylesheet">
+
+    <link href="./assets/css/bootstrap-dashboard.css" rel="stylesheet">
+
+    <link rel="import" href="sections/login.html">
+    <link rel="import" href="sections/register.html">
+    <link rel="import" href="sections/forgot.html">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top is-not-shown">
+      <div class="container-fluid header">
+        <img class="pull-left logo" src="./assets/image/blink_ai.png" width="40">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <a class="navbar-brand" href="#">Blink AI</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="logout"><a class="link" href="/web/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div id="particles-sidebar" class="particles"><canvas class="pg-canvas" width="1315" height="81" style="display: block;"></canvas></div>
+          <script type="text/javascript">
+            jQuery(function () {
+              jQuery('#particles-sidebar').particleground({
+                minSpeedX: 0.1,
+                maxSpeedX: 0.1,
+                minSpeedY: 0.1,
+                maxSpeedY: 0.1,
+                directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
+                directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
+                density: 5000, // How many particles will be generated: one particle every n pixels
+                dotColor: '#EEE',
+                lineColor: '#EEE',
+                particleRadius: 3, // Dot size
+                lineWidth: 0.2,
+                curvedLines: true,
+                proximity: 100, // How close two dots need to be before they join
+                parallax: false
+              });
+            });
+          </script>
+        </div>
+      </nav>
+
+      <div id="content" class="container-fluid content is-not-shown">
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 sidebar">
+            <div class="row profile">
+              <div class="media">
+                <div class="media-left">
+                  <img class="media-object img-rounded box80" src="https://api.adorable.io/avatars/80/admin@blinkai.com">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">
+                    admin@blinkai.com
+                  </h4>
+                    Hello world !
+                </div>
+              </div>
+            </div>
+          <ul class="nav nav-sidebar">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Dashboard <span class="sr-only">(current)</span></a></li>
+            <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>Need Attention</a>
+            <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Autopilot</a>
+            <li><a href="#" id="httprequest"><i class="fa fa-comments-o" aria-hidden="true"></i> Request Check</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <!-- Wrapper -->
+      			<div id="wrapper">
+      			</div>
+        </div>
+      </div>
+    </div>
+    <div id="particles"><canvas class="pg-canvas" width="1315" height="460" style="display: block;"></canvas></div>
+  </body>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./assets/imports')
+    require('./assets/js/menu')
+    require('./assets/js/login')
+    
+  </script>
+</html>
