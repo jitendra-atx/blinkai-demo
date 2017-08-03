@@ -1,0 +1,45 @@
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid header">
+        <img class="pull-left logo" src="./assets/image/blink_ai.png" width="40">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">Blink AI</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="logout"><a class="link" href="/web/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div id="particles-sidebar" class="particles"><canvas class="pg-canvas" width="1315" height="81" style="display: block;"></canvas></div>
+          <script type="text/javascript">
+            jQuery(function () {
+              jQuery('#particles-sidebar').particleground({
+                minSpeedX: 0.1,
+                maxSpeedX: 0.1,
+                minSpeedY: 0.1,
+                maxSpeedY: 0.1,
+                directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
+                directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
+                density: 5000, // How many particles will be generated: one particle every n pixels
+                dotColor: '#EEE',
+                lineColor: '#EEE',
+                particleRadius: 3, // Dot size
+                lineWidth: 0.2,
+                curvedLines: true,
+                proximity: 100, // How close two dots need to be before they join
+                parallax: false
+              });
+            });
+          </script>
+        </div>
+      </nav>

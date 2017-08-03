@@ -1,0 +1,40 @@
+<template class="task-template">
+  <div id="login" class="container customer">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <img class="pull-left logo" src="./assets/image/blink_ai.png" width="90">
+      <h1 class="company-header">Blink AI</h1>
+      <h3 class="subheading">Enter your login credentials</h3>
+      <span class="clearfix"></span>
+      <hr>
+      <div id="data"></div>
+      <form id="loginform" class="form-horizontal" name="login" action="" method="post">
+        <div class="form-group form-group-lg">
+          <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-9">
+            <input type="text" id="inputEmail" name="username" class="form-control dotted" placeholder="Email address" required="" autofocus="">
+          </div>
+        </div>
+        <div class="form-group form-group-lg">
+          <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-9">
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="" autofocus="">
+          </div>
+        </div>
+        <input type="hidden" name="_csrf" value="da22f4cc-2c82-49c7-a6d8-12b587b05eed">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Login</button>
+      </form>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <a id="loginregister" class="link register" href="register"><h4>Register Now !</h4></a>
+        </div>
+        <div class="col-md-6 pull-right" style="text-align: right">
+          <a  id="loginforgot" class="gray link forgot" href="forgotpassword"><h4>Forgot Password</h4></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</template>
