@@ -1,2 +1,7 @@
 # blinkai-demo
-demo example for the blinkai app
+
+Run following commands
+
+npm install
+
+npm start
